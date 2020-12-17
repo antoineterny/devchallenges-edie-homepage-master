@@ -13,7 +13,7 @@ const sourcemaps = require("gulp-sourcemaps")
 
 // File path variables
 const files = {
-	scssPath: "source/**/*.scss",
+	scssPath: "*.scss",
 	imgPath: "img/*"
 }
 

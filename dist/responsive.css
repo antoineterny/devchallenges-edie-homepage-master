@@ -1,0 +1,2 @@
+@media screen and (min-width:600px){.logo{font-size:36px}nav{position:static;padding:42px 52px}nav .mobile-nav{display:none}nav .desktop-nav{display:flex}nav .desktop-nav li{margin-left:3em}nav .desktop-nav a{font-weight:500;font-size:24px}nav .desktop-nav a:hover{color:#2d9cdb}.margin-big{margin-left:277px}header{padding:52px}header .blue-text{font-size:18px;margin-bottom:16px}header h1{font-size:48px;line-height:72px}header .hero-image{height:354px;margin:42px 0}}
+/*# sourceMappingURL=responsive.css.map */

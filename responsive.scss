@@ -1,0 +1,60 @@
+$heebo: "Heebo", sans-serif;
+$poppins: "Poppins", sans-serif;
+
+$blue: #2d9cdb;
+$green: #27ae60;
+$red: #eb5757;
+$gray1: #333333;
+$gray2: #4f4f4f;
+$gray3: #828282;
+$gray4: #bdbdbd;
+$gray5: #e0e0e0e0;
+$gray6: #f2f2f2;
+$deep-purple: #100e1d;
+
+@media screen and (min-width: 600px) {
+  .logo {
+    font-size: 36px;
+  }
+
+  nav {
+    position: static;
+    padding: 42px 52px;
+    .mobile-nav {
+      display: none;
+    }
+    .desktop-nav {
+      display: flex;
+      li {
+        margin-left: 3em;
+      }
+      a {
+        font-weight: 500;
+        font-size: 24px;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .margin-big {
+    margin-left: 277px;
+  }
+
+  header {
+    padding: 52px;
+    .blue-text {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 72px;
+    }
+    .hero-image {
+      height: 354px;
+      margin: 42px 0;
+    }
+  }
+}

@@ -8,7 +8,7 @@
   maximum-scale=5"
     />
 
-    <link rel="icon" href="devchallenges.png" />
+    <link rel="icon" href="img/devchallenges.png" />
 
     <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
 
@@ -28,12 +28,12 @@
       <a class="logo" href="#">Edie</a>
       <ul class="desktop-nav">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Our works</a></li>
-        <li><a href="#">Clients</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Our works</a></li>
+        <li><a href="#testimonials">Clients</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <i class="material-icons mobile-nav">menu</i>
+      <i class="material-icons mobile-nav" id="hamburger">menu</i>
     </nav>
 
     <header>
@@ -83,8 +83,86 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
         <button>Get started</button>
       </div>
-
-      
     </section>
+
+    <section id="works">
+      <h2>Good design means<br>good business</h2>
+      <div class="works-card">
+        <img src="img/smarthome.jpg" alt="Smart home dashboard">
+        <p>Full stack application</p>
+        <h4>Smart home dashboard</h4>
+      </div>
+      
+      <div class="works-card">
+        <img src="img/onboard.png" alt="Onboard application">
+        <p>UX/UI design</p>
+        <h4>Onboard application</h4>
+      </div>
+
+      <div class="works-card">
+        <img src="img/booking.png" alt="Booking system">
+        <p>Mobile application</p>
+        <h4>Booking system</h4>
+      </div>
+
+      <div class="works-card">
+        <img src="img/juice-product.png" alt="Juice product homepage">
+        <p>Front End application</p>
+        <h4>Juice product homepage</h4>
+      </div>
+
+      <a href="#">see more<i class="material-icons">arrow_right_alt</i>
+      </a>
+    </section>
+
+    <section id="team">
+      <div class="red-text">Meet the team</div>
+      <h2>We are chilled<br>and a laidback<br>team</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="team-gallery">
+        <img src="img/person3.png" id="person3">
+        <img src="img/person1.png" id="person1">
+        <img src="img/person2.png" id="person2">
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <blockquote>“Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”</blockquote>
+
+      <div class="customer-card">
+        <img src="img/person4.png">
+        <div class="identity">
+          <h5>Carlos Tran</h5>
+          <p>The Decorate Gatsby</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Our works</a></li>
+        <li><a href="#testimonials">Clients</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="logo" href="#">Edie</div>
+      <div class="social">
+        <img src="svg/instagram.svg" alt="instagram">
+        <img src="svg/linkedin.svg" alt="linkedin">
+        <img src="svg/twitter.svg" alt="twitter">
+      </div>
+      <form action="">
+        <label for="email"> Want us to contact you? </label>
+        <div class="input-container">
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="submit" value="Join" />
+        </div>
+      </form>
+      <div class="signature">Antoine Terny @ DevChallenges.io</div>
+    </footer>
+
+
+
   </body>
 </html>

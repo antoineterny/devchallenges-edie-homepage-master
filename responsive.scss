@@ -13,48 +13,160 @@ $gray6: #f2f2f2;
 $deep-purple: #100e1d;
 
 @media screen and (min-width: 600px) {
-  .logo {
-    font-size: 36px;
-  }
+	.logo {
+		font-size: 36px;
+	}
 
-  nav {
-    position: static;
-    padding: 42px 52px;
-    .mobile-nav {
-      display: none;
-    }
-    .desktop-nav {
-      display: flex;
-      li {
-        margin-left: 3em;
-      }
-      a {
-        font-weight: 500;
-        font-size: 24px;
-        &:hover {
-          color: $blue;
-        }
-      }
-    }
-  }
+	nav {
+		position: static;
+		padding: 42px 52px;
+		.mobile-nav {
+			display: none;
+		}
+		.desktop-nav {
+			display: flex;
+			li {
+				margin-left: 3em;
+			}
+			a {
+				font-weight: 500;
+				font-size: 24px;
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
 
-  .margin-big {
-    margin-left: 277px;
-  }
+	.margin-big {
+		margin-left: 112px;
+	}
 
-  header {
-    padding: 52px;
-    .blue-text {
-      font-size: 18px;
-      margin-bottom: 16px;
+	header {
+		padding: 52px;
+		.blue-text {
+			font-size: 18px;
+			margin-bottom: 16px;
     }
-    h1 {
-      font-size: 48px;
-      line-height: 72px;
+    .container {
+      max-width: 990px;
+      margin: 0 auto;
     }
-    .hero-image {
-      height: 354px;
-      margin: 42px 0;
-    }
-  }
+		h1 {
+			font-size: 48px;
+			line-height: 72px;
+		}
+		.hero-image {
+			height: 354px;
+			margin: 42px 0;
+		}
+		p {
+			font-size: 18px;
+			line-height: 27px;
+			max-width: 350px;
+			margin: 42px 0;
+		}
+	}
+
+	form {
+		* {
+			font-size: 18px;
+		}
+		label {
+			font-size: 14px;
+			margin-bottom: 9px;
+		}
+		.input-container {
+			max-width: 350px;
+			input[type="email"] {
+				padding: 15px 21px;
+			}
+			input[type="submit"] {
+				padding: 11px 28px;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 36px;
+    line-height: 54px;
+    margin-left: 0;
+	}
+
+	section {
+		max-width: 990px;
+    margin: 100px auto;
+    padding: 0 50px;
+	}
+	.services-cards {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.services-card {
+		width: 310px;
+		height: unset;
+	}
+
+	#works {
+		width: 100%;
+		.works-cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			gap: 0 20px;
+			margin-bottom: 0;
+		}
+		div:nth-child(odd) {
+			margin-top: 130px;
+		}
+		.works-card {
+			margin-bottom: -30px;
+		}
+		a {
+			float: right;
+		}
+	}
+
+	#team {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 200px;
+		margin-bottom: 200px;
+		.team-text {
+			flex-shrink: 0;
+			margin-right: 2em;
+		}
+		.team-gallery {
+			max-width: 570px;
+			flex-shrink: 1;
+		}
+	}
+
+	#testimonials {
+		blockquote {
+			max-width: 937px;
+			font-size: 36px;
+			line-height: 54px;
+		}
+	}
+
+	footer {
+    padding: 46px 50px 29px;
+		.footer-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			max-width: 890px;
+			margin: 0 auto;
+		}
+		.footer-social {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		form .input-container {
+      width: 350px;
+		}
+	}
 }

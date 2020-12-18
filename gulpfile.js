@@ -10,11 +10,14 @@ const postcss = require("gulp-postcss")
 const replace = require("gulp-replace")
 const sass = require("gulp-sass")
 const sourcemaps = require("gulp-sourcemaps")
+const babel = require("gulp-babel")
+const uglify = require("gulp-uglify")
 
 // File path variables
 const files = {
 	scssPath: "*.scss",
-	imgPath: "img/*"
+	imgPath: "img/*",
+	jsPath: "*.js"
 }
 
 // Sass task
@@ -24,6 +27,18 @@ function scssTask() {
 		.pipe(sass())
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(sourcemaps.write("."))
+		.pipe(dest("dist"))
+}
+
+// JS task
+function jsTask() {
+	return src("./script.js")
+		.pipe(
+			babel({
+				presets: ["@babel/env"]
+			})
+		)
+		.pipe(uglify())
 		.pipe(dest("dist"))
 }
 
@@ -37,10 +52,8 @@ function cacheBustTask() {
 
 // Watch task
 function watchTask() {
-  watch([files.scssPath, "index.html"],
-    parallel(scssTask, cacheBustTask))
-
+	watch([files.scssPath, "index.html"], parallel(scssTask, jsTask, cacheBustTask))
 }
 
 // Default task
-exports.default = series(scssTask, cacheBustTask, watchTask)
+exports.default = series(scssTask, jsTask, cacheBustTask, watchTask)

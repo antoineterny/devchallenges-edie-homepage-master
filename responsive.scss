@@ -22,6 +22,7 @@ $deep-purple: #100e1d;
 		padding: 42px 52px;
 		&.contracted, &.expanded {
 			height: 121px;
+			transition: none;
 		}
 		.mobile-nav {
 			display: none;

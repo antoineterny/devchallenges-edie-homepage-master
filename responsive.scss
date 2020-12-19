@@ -20,14 +20,17 @@ $deep-purple: #100e1d;
 	nav {
 		position: static;
 		padding: 42px 52px;
+		&.contracted, &.expanded {
+			height: 121px;
+		}
 		.mobile-nav {
 			display: none;
 		}
-		.desktop-nav {
+		#desktop-nav {
 			display: flex;
 			align-items: center;
 			li {
-				margin-left: 3em;
+				margin-left: 2.5em;
 			}
 			a {
 				font-weight: 500;
@@ -39,7 +42,7 @@ $deep-purple: #100e1d;
 		}
 	}
 
-	.margin-big {
+	.left-offset {
 		margin-left: 112px;
 	}
 
@@ -113,6 +116,7 @@ $deep-purple: #100e1d;
 		width: 100%;
 		max-width: 990px;
 		.works-cards {
+			max-width: 100%;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 1fr 1fr;

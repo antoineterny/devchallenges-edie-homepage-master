@@ -38,7 +38,7 @@ function jsTask() {
 				presets: ["@babel/env"]
 			})
 		)
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(dest("dist"))
 }
 
@@ -52,7 +52,7 @@ function cacheBustTask() {
 
 // Watch task
 function watchTask() {
-	watch([files.scssPath, "index.html"], parallel(scssTask, jsTask, cacheBustTask))
+	watch([files.scssPath, "index.html", "script.js"], parallel(scssTask, jsTask, cacheBustTask))
 }
 
 // Default task

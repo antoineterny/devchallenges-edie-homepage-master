@@ -26,11 +26,12 @@ body {
 	color: $gray1;
 	font-weight: 500;
 	min-width: 358px;
-	max-width: 1440px;
-	margin: 0 auto;
 	position: relative;
 }
-
+.body-container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
 .logo {
 	font-family: $heebo;
 	font-style: normal;
@@ -39,19 +40,26 @@ body {
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	padding: 13px 10px;
 	position: sticky;
 	top: 0;
 	background: white;
-	z-index: 99;
+	z-index: 3;
+	overflow: hidden;
+	&.contracted {
+		height: 61px;
+		transition: height 1s;
+	}
+	&.expanded {
+		height: 300px;
+		transition: height 1s;
+	}
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding: 13px 10px;
+	}
 	ul {
 		list-style: none;
-		display: none;
-	}
-	li {
-		display: inline-block;
 	}
 	a {
 		display: block;
@@ -63,20 +71,23 @@ nav {
 		cursor: pointer;
 	}
 }
+#desktop-nav {
+	display: none;
+	li {
+		display: inline-block;
+	}
 
+}
 #mobile-menu {
 	background: $deep-purple;
-	color: white;
 	width: 100%;
-	// height: 100vh;
 	padding: 30px 60px;
-	position: sticky;
-	z-index: 98;
-	top: 61px;
-	right: 0;
+	color: white;
 	ul {
+		color: white;
 		list-style-type: none;
 		li {
+			color: white;
 			font-weight: normal;
 			font-size: 18px;
 			line-height: 200%;
@@ -87,13 +98,9 @@ nav {
 			list-style: none;
 		}
 	}
-	i {
-		position: absolute;
-		right: 10px;
-	}
 }
 
-.margin-big {
+.left-offset {
 	margin-left: 30px;
 }
 
@@ -182,7 +189,7 @@ h2 {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 36px;
-	margin-left: 40px;
+	margin-left: 32px;
 	margin-bottom: 40px;
 }
 
@@ -252,9 +259,11 @@ section {
 }
 
 #works {
-	max-width: 450px;
-	margin-left: auto;
-	margin-right: auto;
+	.works-cards {
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	a {
 		font-weight: 500;
 		font-size: 18px;
@@ -410,7 +419,6 @@ footer {
 		margin-top: 133px;
 	}
 }
-
 
 .hidden {
 	display: none;

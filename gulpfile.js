@@ -38,7 +38,7 @@ function jsTask() {
 				presets: ["@babel/env"]
 			})
 		)
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(dest("dist"))
 }
 

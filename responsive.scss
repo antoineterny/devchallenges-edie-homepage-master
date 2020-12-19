@@ -12,7 +12,7 @@ $gray5: #e0e0e0e0;
 $gray6: #f2f2f2;
 $deep-purple: #100e1d;
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
 	.logo {
 		font-size: 36px;
 	}
@@ -25,6 +25,7 @@ $deep-purple: #100e1d;
 		}
 		.desktop-nav {
 			display: flex;
+			align-items: center;
 			li {
 				margin-left: 3em;
 			}
@@ -57,7 +58,7 @@ $deep-purple: #100e1d;
 			line-height: 72px;
 		}
 		.hero-image {
-			height: 354px;
+			// height: 354px;
 			margin: 42px 0;
 		}
 		p {
@@ -110,6 +111,7 @@ $deep-purple: #100e1d;
 
 	#works {
 		width: 100%;
+		max-width: 990px;
 		.works-cards {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
